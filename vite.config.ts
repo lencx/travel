@@ -8,7 +8,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          lodash: ['lodash'],
           react: [
             'react',
             'react-dom',

@@ -17,7 +17,7 @@ async function toPng(original, target) {
 }
 
 const cityMap = {
-  macau: {
+  macao: {
     name: '澳门',
     desc: '',
   }
@@ -28,7 +28,7 @@ async function init() {
   if (!fs.existsSync('imgs')) fs.mkdirSync('imgs');
   for await (const entry of allPic) {
     const city = entry.match(/^.+\/(.+)\//)?.[1];
-    const target = entry.replace('pictures', 'imgs').replace('heic', 'png');
+    const target = entry.replace('pictures', 'imgs').replace(/.heic/i, '.png');
 
     if (!picMap.has(city)) {
       if (!fs.existsSync(`imgs/${city}`)) fs.mkdirSync(`imgs/${city}`);

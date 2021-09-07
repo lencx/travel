@@ -8,12 +8,12 @@ export default function AboutView() {
   return (
     <div className="home-view">
       <div>
-        {travelData.map((item) => {
+        {travelData.map((item: any) => {
           return (
             <div key={item.type}>
               <h2>{item.name}</h2>
               <ul>
-                {item.data.map((i) => {
+                {item.data.map((i: string) => {
                   return <li><img key={i} src={i} alt="" loading="lazy" /></li>
                 })}
               </ul>
