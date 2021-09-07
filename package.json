@@ -5,7 +5,7 @@
   "author": "lencx <cxin1314@gmail.com>",
   "scripts": {
     "dev": "yarn init:json && vite",
-    "build": "tsc && vite build",
+    "build": "yarn init:json && tsc && vite build",
     "init:json": "node scripts/init.js",
     "type-check": "tsc",
     "lint": "eslint . --ext ts,tsx,js,jsx",
