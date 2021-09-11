@@ -26,6 +26,7 @@ const cityMap = {
 async function init() {
   const allPic = await fg.sync(['pictures/**']);
   if (!fs.existsSync('imgs')) fs.mkdirSync('imgs');
+  if (!fs.existsSync('data')) fs.mkdirSync('data');
   for await (const entry of allPic) {
     const city = entry.match(/^.+\/(.+)\//)?.[1];
     const target = entry.replace('pictures', 'imgs').replace(/.heic/i, '.png');
