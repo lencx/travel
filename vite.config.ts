@@ -14,6 +14,7 @@ export default defineConfig({
             'react-helmet-async',
             'react-router-dom',
           ],
+          heic2any: [ 'heic2any' ],
         },
       },
     },
