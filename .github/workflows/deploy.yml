@@ -22,5 +22,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./
+          exclude_assets: '.github,src,node_modules,scripts'
           force_orphan: true
